@@ -14,6 +14,20 @@ class TasksController < ApplicationController
     else
       render :new
     end
+
+    def show
+    end
+
+    def edit
+      @task = Task.new(task_params)
+    end
+
+    def update
+    end
+
+    def destroy
+      @local_station.destroy
+    def
   end
 
   private
