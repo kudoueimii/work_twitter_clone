@@ -1,4 +1,4 @@
 class Task < ApplicationRecord
   has_many :task_labels
-  belong_to :users
+  belongs_to :users
 end
