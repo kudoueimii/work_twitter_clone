@@ -1,13 +1,14 @@
 class BlogsController < ApplicationController
 
   def create
-    Blog.create(blog_params)
+    @blog = Blog.new(blog_params)
+    @blog.user_id = current_user.id
+    @blog.save
     redirect_to blogs_path
   end
 
   def new
     @blog = Blog.new
-    
   end
 
   def index
