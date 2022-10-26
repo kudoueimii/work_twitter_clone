@@ -17,6 +17,7 @@ class TasksController < ApplicationController
   end
 
   def show
+    @task = Task.find(params[:id])
   end
 
   def edit
@@ -24,11 +25,18 @@ class TasksController < ApplicationController
   end
 
   def update
-    @task.update(task_params)
+    @task = Task.find(params[:id])
+    if @task.update(task_params)
+      redirect_to tasks_path
+    else
+      render :edit
+    end
   end
 
   def destroy
-    @local_station.destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to tasks_path
   end
 
   private

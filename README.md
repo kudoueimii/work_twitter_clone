@@ -19,7 +19,6 @@ LABEL model 内容未定
 |  1  |  Tanaka |  t＠sample。com  |  tanaka  |
 
 Type
-TASK model
 
 |  Task |  Detaile |　Deadline | name |  email | password | label
 | :----: |: ----: | :---- :| :----: | :----: |: ----: | :---- :|
